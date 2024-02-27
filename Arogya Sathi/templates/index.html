@@ -1,0 +1,500 @@
+{% extends "base.html" %} {% block head %}
+<title>Arogya Sathi</title>
+{% endblock head %} {% block hero %}
+
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 data-aos="fade-up">What is Arogya Sathi?</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400" style="text-align: justify">
+          Arogya Sathi is a platform that allows you to identify healthcare specialists, anticipate ailments, and find hospitals near you based on symptoms. It also includes a BMI calculator and a healthy diet.
+        </h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <a
+              href="#about"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center"
+            >
+              <span>Get Started</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img
+          src="{{ url_for('static',filename='custom/hero-main.jpg') }}"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock hero %} {% block main %}
+
+
+    <!-- ======= Diet Section ======= -->
+    <section id="diet" class="diet">
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+          <div
+            class="justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="section-header">
+              <p>Healthy Diet Plan</p>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <img
+                    src="{{ url_for('static',filename='img/diet.png') }}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+                  <div class="row align-self-center justify-content-center gy-4">
+                    <h1>
+                        From Farm to Fork
+                    </h1>
+                    <h2>Savor the Goodness of a Healthy Diet</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <button id="button1" class="button">Button 1</button>
+              <button id="button2" class="button">Button 2</button>
+              <button id="button3" class="button">Button 3</button>
+              <button id="button4" class="button">Button 4</button>
+            </div>
+
+            <div id="content1" class="dietdata">Content for Button 1</div>
+            <div id="content2" class="dietdata">Content for Button 2</div>
+            <div id="content3" class="dietdata">Content for Button 3</div>
+            <div id="content4" class="dietdata">Content for Button 4</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Diet Section -->
+
+
+
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="row gx-0">
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+    
+        <div class="content">
+          <h3>BMI</h3>
+          <h2>
+            The body mass index (BMI) is that the metric currently in use for
+            outlining anthropometric height and weight characteristics in adults
+            and for classifying them into groups.
+          </h2>
+          <div class="text-center text-lg-start">
+            <a
+              href="login"
+              class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center"
+            >
+              <span>Check BMI</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-lg-6 d-flex align-items-center"
+        data-aos="zoom-out"
+        data-aos-delay="200"
+      >
+        <img
+          src="{{ url_for('static',filename='custom/about.png') }}"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <h2>Features</h2>
+      <p>What makes our website unique?</p>
+    </header>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <img
+          src="{{ url_for('static',filename='img/features.png') }}"
+          class="img-fluid"
+          alt=""
+        />
+      </div>
+
+      <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+        <div class="row align-self-center gy-4">
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Faster analysis</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Easy to use</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Personalized meal plans</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Health tips</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Easy to share</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Accurate results</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- / row -->
+  </div>
+</section>
+<!-- End Features Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+    <header class="section-header">
+      <p>Spcialist Doctors all over India</p>
+    </header>
+
+    <div class="row gy-4">
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-2.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1432-sanjay-sachdeva/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Sanjay Sachdeva</h4>
+            <span>Otolaryngologist</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-3.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1463-ashish-sabharwal/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Ashish Sabharwal</h4>
+            <span>Urologist, Robotic Surgeon</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-4.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1435-surbhi-anand/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Surbhi Anand</h4>
+            <span>Dentist </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-5.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/gagan-gautam/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Gagan Gautam</h4>
+            <span>Uro - Oncologist </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-6.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1445-aditya-gupta/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Aditya Gupta</h4>
+            <span>Neurosurgeon </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-7.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1456-sandeep-batra/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Sandeep Batra</h4>
+            <span>Oncologist </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-8.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1436-sks-marya/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. SKS Marya</h4>
+            <span>Orthopaedic Surgeon </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-9.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1441-gaurav-kharya/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Gaurav Kharya</h4>
+            <span>Pediatric Haemato-Oncologist </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-10.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.lyfboat.com/doctor/1457-ankur-bahl/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Ankur Bahl</h4>
+            <span>Medical Oncologist </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col-md-6 d-flex align-items-stretch"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div class="member">
+          <div class="member-img">
+            <img
+              src="{{ url_for('static',filename='img/team/doc-11.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+            <div class="social">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a
+                href="https://www.lyfboat.com/doctor/1434-amandeep-singh-dhillon/"
+                ><i class="bi bi-telephone"></i
+              ></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Dr. Amandeep Singh Dhillon</h4>
+            <span>Dentist </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Team Section -->
+
+{% endblock main %}
