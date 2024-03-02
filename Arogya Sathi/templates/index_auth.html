@@ -8,7 +8,9 @@
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h1 data-aos="fade-up">What is Arogya Sathi?</h1>
         <h2 data-aos="fade-up" data-aos-delay="400" style="text-align: justify">
-            Arogya Sathi is a platform that allows you to identify healthcare specialists, anticipate ailments, and find hospitals near you based on symptoms. It also includes a BMI calculator and a healthy diet.
+          <b style="color: #012970;">Arogya Sathi</b> is a platform that allows you to identify healthcare
+          specialists, anticipate ailments, and find hospitals near you based on
+          symptoms. It also includes a BMI calculator and a healthy diet.
         </h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
@@ -485,8 +487,8 @@
 <div id="chat-bot" onclick="showDiv();">
   <div class="icon">
     <div class="user">
-      <i class="fas"></i> Arogya Sathi Disease Prediction and Hospital
-      Recommendation Chatbot
+      <i class="fas"></i> Arogya Sathi: Disease Prediction and Hospital
+      Recommendation System
     </div>
     <i class="bi bi-chat"></i>
   </div>
@@ -496,14 +498,17 @@
   <section id="avenue-messenger" class="avenue-messenger">
     <div class="menu"></div>
     <div class="agent-face">
-      <img class="agent circle"
-      src="https://cliply.co/wp-content/uploads/2019/05/371905140_MEET_ROBOT_400px.gif"
-      alt="Chatbot"/ style="margin-top: 70px;" >
+      <img
+        class="agent circle"
+        src="https://cliply.co/wp-content/uploads/2019/05/371905140_MEET_ROBOT_400px.gif"
+        alt="Chatbot"
+        style="margin-top: 70px"
+      />
     </div>
     <div class="chat">
       <div class="chat-title">
         <h1>Arogya Sathi</h1>
-        <h2>AI Chatbot</h2>
+
         <!--  <figure class="avatar">
                       <img src="http://askavenue.com/img/17.jpg" /></figure>-->
       </div>
@@ -513,9 +518,16 @@
       <div class="message-box">
         <textarea
           type="text"
+          id="result"
           class="message-input"
           placeholder="Type message..."
         ></textarea>
+
+        <i
+          class="fa fa-microphone"
+          id="start-record-btn"
+          aria-hidden="true"
+        ></i>
         <button type="submit" class="message-submit">Send</button>
       </div>
     </div>
@@ -668,6 +680,45 @@
       chat_box.toggleClass("expanded");
     }, 100);
   });
+
+  const startRecordBtn = document.getElementById("start-record-btn");
+  const resultTextarea = document.getElementById("result");
+
+  startRecordBtn.addEventListener("click", () => {
+    const recognition = new webkitSpeechRecognition();
+    recognition.lang = "en-US";
+    recognition.start();
+
+    recognition.onresult = function (event) {
+      const transcript = event.results[0][0].transcript;
+      resultTextarea.value = transcript;
+    };
+  });
+
+  document.querySelector(".message-submit").addEventListener("click", () => {
+    const query = resultTextarea.value.trim();
+    if (query !== "") {
+      sendVoiceData(query);
+    }
+  });
+
+  function sendVoiceData(query) {
+    fetch("/search", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query: query }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        // Handle search results
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
 </script>
 
 {% endblock main %}

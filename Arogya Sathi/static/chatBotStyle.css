@@ -378,7 +378,13 @@ Message Box
     color: #333;
 }
 
-
+.fa-microphone {
+    margin-left:150px;
+    font-size: 20px;
+    color: #007bff;
+    cursor: pointer;
+    
+}
 /*--------------------
 Custom Srollbar
 --------------------*/

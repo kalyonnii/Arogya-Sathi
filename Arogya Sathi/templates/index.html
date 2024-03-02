@@ -8,7 +8,10 @@
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h1 data-aos="fade-up">What is Arogya Sathi?</h1>
         <h2 data-aos="fade-up" data-aos-delay="400" style="text-align: justify">
-          Arogya Sathi is a platform that allows you to identify healthcare specialists, anticipate ailments, and find hospitals near you based on symptoms. It also includes a BMI calculator and a healthy diet.
+          <b style="color: #012970">Arogya Sathi</b> is a platform that allows
+          you to identify healthcare specialists, anticipate ailments, and find
+          hospitals near you based on symptoms. It also includes a BMI
+          calculator and a healthy diet.
         </h2>
         <div data-aos="fade-up" data-aos-delay="600">
           <div class="text-center text-lg-start">
@@ -35,58 +38,1127 @@
 
 {% endblock hero %} {% block main %}
 
-
-    <!-- ======= Diet Section ======= -->
-    <section id="diet" class="diet">
-      <div class="container" data-aos="fade-up">
-        <div class="row gx-0">
-          <div
-            class="justify-content-center"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="section-header">
-              <p>Healthy Diet Plan</p>
+<!-- ======= Diet Section ======= -->
+<section id="diet" class="diet">
+  <div class="container" data-aos="fade-up">
+    <div class="row gx-0">
+      <div
+        class="justify-content-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="section-header">
+          <p>Healthy Diet Plan</p>
+        </div>
+        <div>
+          <div class="row">
+            <div class="col-lg-6">
+              <img
+                src="{{ url_for('static',filename='img/diet.png') }}"
+                class="img-fluid"
+                alt=""
+              />
             </div>
-            <div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <img
-                    src="{{ url_for('static',filename='img/diet.png') }}"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
 
-                <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
-                  <div class="row align-self-center justify-content-center gy-4">
-                    <h1>
-                        From Farm to Fork
-                    </h1>
-                    <h2>Savor the Goodness of a Healthy Diet</h2>
+            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+              <div class="row align-self-center justify-content-center gy-4">
+                <h1
+                  style="
+                    color: #012970;
+                    align-items: center;
+                    margin-left: 190px;
+                  "
+                >
+                  <b>From Farm to Fork</b>
+                </h1>
+                <h2 style="color: #012970">
+                  Savor the Goodness of a Healthy Diet
+                </h2>
+                <a href="#categories">
+
+              
+                <button class="btn-cate" style="
+               
+                align-items: center;
+                margin-left: 150px;
+              ">Organic Recipes <i class="bi bi-arrow-right"></i> </button>
+
+              </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="categories" class="btn-diet">
+          <h1 style="color: #012970; align-items: center">
+            <b>Categories</b>
+          </h1>
+          <div class="flex">
+            <button id="button1" class="button">All</button>
+            <button id="button2" class="button">Breakfast</button>
+            <button id="button3" class="button">Lunch</button>
+            <button id="button4" class="button">Dinner</button>
+          </div>
+
+          <div id="content1" class="dietdata">
+            <div class="container">
+              <div class="row diet-card">
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/1.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Rainbow Bowl with Sunflower Butter Dressing
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/rainbow-bowl-with-sunflower-butter-dressing/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/2.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Easy Homemade Falafel
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/easy-homemade-falafel/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/3.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        15-Minute Quesadillas
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/15-minute-quesadillas/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/4.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Easy Vegan Cherry Sponge Cake
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/easy-vegan-cherry-sponge-cake/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/5.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Teriyaki Tofu Sushi Bowl
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/teriyaki-tofu-sushi-bowl/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/6.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Miso Sesame Glazed Eggplant
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/miso-sesame-glazed-eggplant/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/7.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Green Gnocchi
+                      </p>
+                      <p>
+                        <a href="https://challenge22.com/green-gnocchi/">
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/8.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Barbie Pink Raspberry Ice Cream
+                      </p>
+                      <p>
+                        <a
+                          href="https://challenge22.com/barbie-pink-raspberry-ice-cream/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/9.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Bounty Hearts
+                      </p>
+                      <p>
+                        <a href="https://challenge22.com/bounty-hearts/">
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/10.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Vegan Chickpea ‘Tuna’
+                      </p>
+                      <p>
+                        <a href="https://challenge22.com/vegan-chickpea-tuna/">
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="flex">
-              <button id="button1" class="button">Button 1</button>
-              <button id="button2" class="button">Button 2</button>
-              <button id="button3" class="button">Button 3</button>
-              <button id="button4" class="button">Button 4</button>
-            </div>
 
-            <div id="content1" class="dietdata">Content for Button 1</div>
-            <div id="content2" class="dietdata">Content for Button 2</div>
-            <div id="content3" class="dietdata">Content for Button 3</div>
-            <div id="content4" class="dietdata">Content for Button 4</div>
+              <div
+                style="
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+                  margin-top: 20px;
+                "
+              >
+                <a href="https://foodie-crush4.netlify.app/">
+                  <button id="btn-recipe" class="button">Search More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="content2" class="dietdata">
+            <div class="container">
+              <div class="row diet-card">
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/11.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Chia Pudding Recipe (Easy & Healthy)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/chia-pudding/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/12.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Oats Porridge Recipe | Oatmeal Porridge
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/oats-porridge-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/13.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Eggless Banana Pancakes | Healthy Vegan Banana Pancakes
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/eggless-banana-pancake-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/14.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Overnight Oats
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/overnight-oats-recipe-oats-recipes/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/15.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Eggless Pancakes Recipe | Whole Wheat Pancakes
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/eggless-pancake-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/16.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Quinoa Upma Recipe (Healthy Twist On A Classic)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/quinoa-upma-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/17.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Avocado Toast (Easy, Simple And Healthy)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/avocado-garlic-toast-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/18.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Fruit Salad Recipe (Simple, Easy & Healthy)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/fruit-salad-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+                  margin-top: 20px;
+                "
+              >
+                <a href="https://foodie-crush4.netlify.app/">
+                  <button id="btn-recipe" class="button">Search More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="content3" class="dietdata">
+            <div class="container">
+              <div class="row diet-card">
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/19.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Veg Biryani Recipe (Hyderabadi Vegetable Dum Biryani)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/hyderabad-veg-biryani-hyderabadi-vegetable-dum-biryani-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/20.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Veg Pulao Recipe (Mix Vegetable Pulav)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/vegetable-pulao-recipe-veg-pulao/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/21.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Curd Rice Recipe | Daddojanam | Thayir Sadam
+                      </p>
+                      <p>
+                        <a href="https://www.vegrecipesofindia.com/curd-rice/">
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/22.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Tomato Rice Recipe | Quick Thakkali Sadam
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/tomato-rice-recipe-easy-tomato-rice/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/23.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Peas Pulao Or Matar Pulao (Simple Steps, Delicious
+                        Results)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/matar-pulao-peas-pulao-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/24.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Lemon Rice (Tangy Flavorful Rice)
+                      </p>
+                      <p>
+                        <a href="https://www.vegrecipesofindia.com/lemon-rice/">
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/25.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Jeera Rice | Cumin Rice (Restaurant Style Recipe)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/jeera-rice-recipe-cumin-rice/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/26.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Veg Fried Rice Recipe | Vegetable Fried Rice (Chinese
+                        Style)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/veg-fried-rice-recipe/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+                  margin-top: 20px;
+                "
+              >
+                <a href="https://foodie-crush4.netlify.app/">
+                  <button id="btn-recipe" class="button">Search More</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div id="content4" class="dietdata">
+            <div class="container">
+              <div class="row diet-card">
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/27.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Shahi Paneer Recipe (Mughlai Style)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/shahi-paneer/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/28.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Lauki Kofta | Lauki Ke Kofte
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/lauki-kofta-lauki-kofta-curry/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/29.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Paneer Lababdar (Restaurant Style Recipe)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/paneer-lababdar-recipe-restaurant-style/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/30.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Methi Matar Malai | Creamy Methi Malai Matar
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/methi-matar-malai-recipe-methi-matar-malai/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/31.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Manchurian Recipe | Veg Manchurian (Dry And Gravy)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/veg-manchurian-veg-manchurian-gravy/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/32.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Kadhi Recipe | Punjabi Kadhi Pakora
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/punjabi-kadhi-recipe-punjabi-kadhi-pakora/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/33.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Malai Kofta Recipe (Restaurant Style Paneer Kofta)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/malai-kofta/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div
+                    class="recipe-card"
+                    class="col-lg-3 col-md-6 align-items-stretch"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="diet-img"
+                      src="{{ url_for('static',filename='img/diet/34.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="res-info">
+                      <p style="color: #012970; align-items: center">
+                        Kadai Paneer Recipe (Restaurant & Homestyle)
+                      </p>
+                      <p>
+                        <a
+                          href="https://www.vegrecipesofindia.com/kadai-paneer-recipe-kadai-paneer/"
+                        >
+                          <button id="btn-recipe" class="button">
+                            Find Recipe
+                          </button>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  align-items: center;
+                  justify-content: center;
+                  display: flex;
+                  margin-top: 20px;
+                "
+              >
+                <a href="https://foodie-crush4.netlify.app/">
+                  <button id="btn-recipe" class="button">Search More</button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Diet Section -->
-
-
-
+    </div>
+  </div>
+</section>
+<!-- End Diet Section -->
 
 <!-- ======= About Section ======= -->
 <section id="about" class="about">
@@ -97,7 +1169,6 @@
         data-aos="fade-up"
         data-aos-delay="200"
       >
-    
         <div class="content">
           <h3>BMI</h3>
           <h2>

@@ -2372,8 +2372,92 @@ section {
 .button {
   margin: 5px;
 }
+.btn-diet {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+}
 
-.diet{
+.flex {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row; /* Stack buttons vertically */
+}
+
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+
+.diet-card{
+  margin-top: 30px;
+  gap: 20px;
+  display: flex;
   
- 
+}
+.card{
+  height: auto;
+  width: 200px;
+  background-color:whitesmoke;
+}
+
+.card:hover{
+  background-color: lightgrey;
+}
+.diet-img{
+  height: 150px;
+  width: 170px;
+  border-radius: 10px;
+  
+}
+.recipe-card{
+  margin-top: 10px;
+}
+
+.res-info{
+  margin-top: 8px;
+}
+
+
+.btn-cate{
+  margin-top: 30px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn-cate:hover {
+  background-color: #45a049;
+}
+
+/* Active state */
+.btn-cate:active {
+  background-color: #3e8e41;
 }

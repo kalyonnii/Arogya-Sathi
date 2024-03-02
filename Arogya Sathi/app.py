@@ -1,6 +1,7 @@
 import random
 from flask import jsonify
 import secrets
+import speech_recognition as sr
 from flask import Flask, render_template, flash, redirect, url_for, session, logging, request, session
 from flask_sqlalchemy import SQLAlchemy
 ALLOWED_EXTENSIONS = ['png', 'jpg', 'jpeg']
@@ -28,6 +29,35 @@ def index_auth():
     my_id = make_token()
     userSession[my_id] = -1
     return render_template("index_auth.html",sessionId=my_id)
+
+
+# VOICE 
+
+
+@app.route('/search', methods=['POST'])
+def search():
+    data = request.json
+    query = data['query']
+    
+    # Perform speech-to-text conversion
+    recognizer = sr.Recognizer()
+    audio_data = sr.AudioData(query, sample_rate=16000)  # Adjust sample rate if needed
+    try:
+        text = recognizer.recognize_google(audio_data)
+        # Process the recognized text (e.g., perform search)
+        # Example: dummy response
+        results = ['Result 1', 'Result 2', 'Result 3']
+        return jsonify(results=results)
+    except sr.UnknownValueError:
+        return jsonify(error="Could not understand audio")
+    except sr.RequestError as e:
+        return jsonify(error=f"Could not request results; {e}")
+    
+
+
+    #CLOSE VOICE
+
+
 @app.route("/instruct")
 def instruct():
     return render_template("instructions.html")
@@ -64,17 +94,19 @@ def login():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        uname = request.form['uname']
-        mail = request.form['mail']
-        passw = request.form['passw']
+        try:
+            uname = request.form['uname']
+            mail = request.form['mail']
+            passw = request.form['passw']
 
-        register = user(username=uname, email=mail, password=passw)
-        db.session.add(register)
-        db.session.commit()
+            new_user = user(username=uname, email=mail, password=passw)
+            db.session.add(new_user)
+            db.session.commit()
 
-        return redirect(url_for("login"))
+            return redirect(url_for("login"))
+        except Exception as e:
+            return f"An error occurred: {str(e)}"
     return render_template("register.html")
-
 
 import msgConstant as msgCons
 import re
@@ -449,6 +481,7 @@ def chat_msg():
 
 
 if __name__ == "__main__":
+
     with app.app_context():
         db.create_all()
-        app.run(debug=False, port=3000)
+        app.run(debug=True, port=3000)
